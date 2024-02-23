@@ -24,9 +24,10 @@ public class FirstHomework {
         for (int i = 0; i < 100; i++) {
             boolean composite = false;
             for (int j = 2; j < Math.sqrt(i); j++) {
-                if (i%j == 0) {
+                if (i % j == 0) {
                     composite = true;
-                };
+                    break;
+                }
             }
             if (!composite) {
                 System.out.print(i + " ");
