@@ -1,7 +1,7 @@
 package com.test;
 
 public class FirstHomework {
-    private static void method1() {
+    private static void printDivisorsOfSeven() {
         for (int number = 1; number < 100; number++) {
             if (number % 7 == 0) {
                 System.out.print(number + " ");
@@ -9,18 +9,20 @@ public class FirstHomework {
         }
         System.out.println();
     }
-    private static void method2() {
+
+    private static void findMaxAndAverage() {
         int[] array = new int[10];
         int maxValue = 0;
         int averageValue = 0;
         for (int index = 0; index < array.length; index++) {
-            array[index] = (int) (Math.random()*100);
+            array[index] = (int) (Math.random() * 100);
             maxValue = Math.max(maxValue, array[index]);
-            averageValue = (averageValue + array[index])/2;
+            averageValue = (averageValue + array[index]) / 2;
         }
         System.out.println("Max value: " + maxValue + " Average value: " + averageValue);
     }
-    private static void method3() {
+
+    private static void printFirstPrimes() {
         for (int number = 0; number < 100; number++) {
             boolean composite = false;
             for (int divider = 2; divider < Math.sqrt(number); divider++) {
@@ -35,7 +37,8 @@ public class FirstHomework {
         }
         System.out.println();
     }
-    private static void method4() {
+
+    private static void printSnowflakes() {
         for (int row = 0; row < 3; row++) {
             for (int column = 0; column < 5; column++) {
                 System.out.print("* ");
@@ -43,10 +46,11 @@ public class FirstHomework {
             System.out.println();
         }
     }
+
     public static void main(String[] args) {
-        method1();
-        method2();
-        method3();
-        method4();
+        printDivisorsOfSeven();
+        findMaxAndAverage();
+        printFirstPrimes();
+        printSnowflakes();
     }
 }
