@@ -1,8 +1,7 @@
-
 package com.test;
 
 public class ThirdClass {
-    public String methodE(FirstClass firstObject, SecondClass secondObject){
+    public String methodE(FirstClass firstObject, SecondClass secondObject) {
         firstObject.methodB();
         secondObject.methodD();
         return "Stop!";
@@ -12,7 +11,7 @@ public class ThirdClass {
         throw new Exception("Throwing Exception");
     }
 
-    private String privateMethod(){
+    private String privateMethod() {
         return "I`m private method!";
     }
 }

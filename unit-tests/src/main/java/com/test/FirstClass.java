@@ -2,10 +2,12 @@ package com.test;
 
 public class FirstClass {
     public int count;
-    public void methodA(){
+
+    public void methodA() {
         System.out.println("Done!");
     }
-    public void methodB(){
+
+    public void methodB() {
         SecondClass secondObject = new SecondClass();
         this.count++;
         secondObject.methodC();

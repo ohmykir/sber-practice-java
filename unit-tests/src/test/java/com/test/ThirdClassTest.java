@@ -5,23 +5,30 @@ import org.junit.jupiter.api.Test;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 public class ThirdClassTest {
 
     @Test
-    public void testWithMock(){
+    public void testWithMock() {
         FirstClass objectOne = mock(FirstClass.class);
+        doNothing().when(objectOne).methodA();
+        doNothing().when(objectOne).methodB();
+
         SecondClass objectTwo = mock(SecondClass.class);
+        doNothing().when(objectTwo).methodC();
+        doNothing().when(objectTwo).methodD();
+
         ThirdClass mainObject = new ThirdClass();
 
         assertEquals("Stop!", mainObject.methodE(objectOne, objectTwo));
+        verify(objectOne, times(1)).methodB();
+        verify(objectTwo, times(1)).methodD();
     }
 
     @Test
-    public void countCalls(){
+    public void countCalls() {
         FirstClass fObj = new FirstClass();
         SecondClass sObj = new SecondClass();
         ThirdClass thObj = new ThirdClass();
@@ -32,9 +39,10 @@ public class ThirdClassTest {
     }
 
     @Test
-    public void throwingExceptionTest(){
+    public void throwingExceptionTest() {
         ThirdClass object = new ThirdClass();
-        assertThrows(Exception.class, object::throwingException);
+        Exception exception = assertThrows(Exception.class, object::throwingException);
+        assertTrue(exception.getMessage().contains("Throwing Exception"));
     }
 
     @Test
