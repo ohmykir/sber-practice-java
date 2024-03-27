@@ -1,6 +1,6 @@
 package com.test;
 
-public class Triangle extends Figure implements Drawable{
+public class Triangle extends Figure implements Drawable {
     private double size1;
     private double size2;
     private double size3;
@@ -12,7 +12,7 @@ public class Triangle extends Figure implements Drawable{
     @Override
     public double area() {
         double p = this.perimeter();
-        return Math.sqrt(p*(p-this.size1)*(p-this.size2)*(p-this.size3));
+        return Math.sqrt(p * (p - this.size1) * (p - this.size2) * (p - this.size3));
     }
 
     @Override
@@ -27,6 +27,6 @@ public class Triangle extends Figure implements Drawable{
 
     @Override
     public void draw(Color color) {
-        System.out.println("Нарисован "+ color.getTitle() + " треугольник с центром: x = " + this.point.getX() + ", y = " + this.point.getY());
+        System.out.println("Нарисован " + color.getTitle() + " треугольник с центром: x = " + this.point.getX() + ", y = " + this.point.getY());
     }
 }

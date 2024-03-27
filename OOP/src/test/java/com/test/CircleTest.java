@@ -2,13 +2,11 @@ package com.test;
 
 import org.junit.jupiter.api.Test;
 
-import java.awt.*;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CircleTest {
     @Test
-    public void firstTest(){
+    public void firstTest() {
         Circle circle = new Circle(5, Color.BLUE);
 
         assertEquals(78.53981633974483, circle.area());
@@ -16,7 +14,7 @@ public class CircleTest {
     }
 
     @Test
-    public void secondTest(){
+    public void secondTest() {
         Circle circle = new Circle(1, Color.RED);
 
         assertEquals(Math.PI, circle.area());
@@ -24,7 +22,7 @@ public class CircleTest {
     }
 
     @Test
-    public void toStringTest(){
+    public void toStringTest() {
         Circle circle = new Circle(5, Color.BLUE);
         Circle circle2 = new Circle(1, Color.RED);
 

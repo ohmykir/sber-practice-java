@@ -10,12 +10,12 @@ public class Rectangle extends Figure implements Drawable {
 
     @Override
     public double area() {
-        return this.length*this.width;
+        return this.length * this.width;
     }
 
     @Override
     public double perimeter() {
-        return 2*(this.length+this.width);
+        return 2 * (this.length + this.width);
     }
 
     @Override
@@ -25,6 +25,6 @@ public class Rectangle extends Figure implements Drawable {
 
     @Override
     public void draw(Color color) {
-        System.out.println("Нарисован "+ color.getTitle() + " прямоугольник с центром: x = " + this.point.getX() + ", y = " + this.point.getY());
+        System.out.println("Нарисован " + color.getTitle() + " прямоугольник с центром: x = " + this.point.getX() + ", y = " + this.point.getY());
     }
 }

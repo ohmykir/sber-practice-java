@@ -57,13 +57,14 @@ public class PizzaOrder {
                 '}';
     }
 
-    public void order(){
-        String s = this.isSousNeeded? "с соусом" : "без соуса";
+    public void order() {
+        String s = this.isSousNeeded ? "с соусом" : "без соуса";
         System.out.println("Заказ принят. " + this.size.getTitle() + " пицца '" + this.name + "' " + s
-                                                                + " на адрес " + this.address);
+                + " на адрес " + this.address);
         this.isAccepted = true;
     }
-    public void cancel(){
+
+    public void cancel() {
         System.out.println("Заказ отменен.");
         this.isAccepted = false;
     }

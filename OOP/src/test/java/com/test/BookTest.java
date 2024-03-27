@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BookTest {
     @Test
-    public void toStringTest1(){
+    public void toStringTest1() {
         Author author = new Author("Александр Пушкин", "мужчина", "PushkinAS@yandex.ru");
         Book book = new Book("Капитанская дочка", author, 1836);
 
@@ -14,7 +14,7 @@ public class BookTest {
     }
 
     @Test
-    public void toStringTest2(){
+    public void toStringTest2() {
         Author author = new Author("Брюс Эккель", "мужчина", "EckelBruce@yandex.ru");
         Book book = new Book("Философия Java", author, 2006);
 

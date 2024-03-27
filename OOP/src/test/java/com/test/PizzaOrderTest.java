@@ -14,11 +14,12 @@ public class PizzaOrderTest {
     private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
 
     @BeforeEach
-    public void setUp(){
+    public void setUp() {
         System.setOut(new PrintStream(outputStreamCaptor));
     }
+
     @Test
-    public void orderTest(){
+    public void orderTest() {
         PizzaOrder pizzaOrder = new PizzaOrder("Margarita", Size.LARGE, true, "Kozlenskaya, 33");
         assertEquals("PizzaOrder{Name = 'Margarita', size = LARGE, isSousNeeded = true," +
                 " address = 'Kozlenskaya, 33', isAccepted = false}", pizzaOrder.toString());
@@ -29,7 +30,7 @@ public class PizzaOrderTest {
     }
 
     @Test
-    public void cancelTest(){
+    public void cancelTest() {
         PizzaOrder pizzaOrder = new PizzaOrder("Margarita", Size.LARGE, true, "Kozlenskaya, 33");
         pizzaOrder.cancel();
 
@@ -37,7 +38,7 @@ public class PizzaOrderTest {
     }
 
     @AfterEach
-    public void tearDown(){
+    public void tearDown() {
         System.setOut(standardOut);
     }
 }

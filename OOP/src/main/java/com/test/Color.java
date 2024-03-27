@@ -10,9 +10,10 @@ public enum Color {
 
     private String title;
 
-    public String getTitle(){
+    public String getTitle() {
         return this.title;
     }
+
     Color(String title) {
         this.title = title;
     }

@@ -8,7 +8,7 @@ public enum Size {
     private String title;
 
     public String getTitle(){
-        return this.title;
+        return title;
     }
     Size(String title) {
         this.title = title;

@@ -1,26 +1,26 @@
 package com.test;
 
 import org.junit.jupiter.api.*;
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PhoneTest{
+public class PhoneTest {
     private final PrintStream standardOut = System.out;
     private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
 
+    private static final Phone phoneOne = new Phone();
+    private static final Phone phoneTwo = new Phone("88005553535", "iPhone X");
 
     @BeforeEach
-    public void setUp(){
+    public void setUp() {
         System.setOut(new PrintStream(outputStreamCaptor));
     }
 
     @Test
-    public void receiveCallTest(){
-        Phone phoneOne = new Phone();
-        Phone phoneTwo = new Phone("88005553535", "iPhone X");
-
+    public void receiveCallTest() {
         phoneOne.receiveCall("Коля");
         assertEquals("Звонит: Коля", outputStreamCaptor.toString().trim());
 
@@ -29,15 +29,15 @@ public class PhoneTest{
     }
 
     @Test
-    public void toStringTest(){
-        Phone phoneTwo = new Phone("88005553535", "iPhone X");
+    public void toStringTest() {
         Phone phoneThree = new Phone("+79990002255", "Nokia3310", 350);
 
         assertEquals("Номер: 88005553535; модель: iPhone X; вес: 0.0", phoneTwo.toString());
         assertEquals("Номер: +79990002255; модель: Nokia3310; вес: 350.0", phoneThree.toString());
     }
+
     @Test
-    public void sendMessageTest(){
+    public void sendMessageTest() {
         Phone phone = new Phone();
         String[] numbers = new String[3];
         numbers[0] = "554477";
@@ -49,8 +49,7 @@ public class PhoneTest{
     }
 
     @AfterEach
-    public void tearDown(){
+    public void tearDown() {
         System.setOut(standardOut);
     }
-
 }
