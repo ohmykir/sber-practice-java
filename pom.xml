@@ -12,5 +12,6 @@
     <modules>
         <module>base-syntax</module>
         <module>unit-tests</module>
+        <module>exceptions</module>
     </modules>
 </project>
