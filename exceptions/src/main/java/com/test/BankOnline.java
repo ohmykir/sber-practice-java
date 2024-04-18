@@ -5,11 +5,11 @@ import java.util.Arrays;
 import static java.util.stream.Collectors.joining;
 
 public class BankOnline {
-    static String[] blockedCards = {"1111 1111 1111 1111",
+    private static final String[] blockedCards = {"1111 1111 1111 1111",
             "2222 2222 2222 2222",
             "3333 3333 3333 3333"};
 
-    static final int limit = 50000;
+    private static final int limit = 50000;
 
     public void send(String cardNumber, Double money) throws BankOnlineException {
         if (cardNumber == null) {
