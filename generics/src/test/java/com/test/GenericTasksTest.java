@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.util.*;
 
 
-public class genericTasksTest {
+public class GenericTasksTest {
     private static final ArrayList<Integer> list = new ArrayList<>();
 
     @Test
@@ -16,7 +16,7 @@ public class genericTasksTest {
             list.add(i);
         }
 
-        assertEquals(5, genericTasks.countEven(list));
+        assertEquals(5, GenericTasks.countEven(list));
     }
 
     @Test
@@ -25,7 +25,7 @@ public class genericTasksTest {
             list.add(i);
         }
 
-        assertEquals(0, genericTasks.countEven(list));
+        assertEquals(0, GenericTasks.countEven(list));
     }
 
     @Test
@@ -34,7 +34,7 @@ public class genericTasksTest {
             list.add(i);
         }
 
-        assertEquals(15, genericTasks.countEven(list));
+        assertEquals(15, GenericTasks.countEven(list));
     }
 
     @Test
@@ -43,7 +43,7 @@ public class genericTasksTest {
             list.add(i);
         }
 
-        genericTasks.swapElements(list, 0, 9);
+        GenericTasks.swapElements(list, 0, 9);
         assertEquals(9, list.get(0));
         assertEquals(0, list.get(9));
     }

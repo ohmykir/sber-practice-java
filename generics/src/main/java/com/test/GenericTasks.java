@@ -2,7 +2,7 @@ package com.test;
 
 import java.util.*;
 
-public class genericTasks {
+public class GenericTasks {
     public static <T extends Number> int countEven(Collection<T> collection) {
         int count = 0;
         for (T element : collection) {
