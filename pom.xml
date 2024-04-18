@@ -13,5 +13,7 @@
         <module>base-syntax</module>
         <module>unit-tests</module>
         <module>exceptions</module>
+        <module>generics</module>
+        <module>OOP</module>
     </modules>
 </project>
