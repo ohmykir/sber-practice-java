@@ -15,5 +15,6 @@
         <module>generics</module>
         <module>OOP</module>
         <module>exceptions</module>
+        <module>lambdas</module>
     </modules>
 </project>
