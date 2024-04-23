@@ -15,5 +15,6 @@
         <module>generics</module>
         <module>OOP</module>
         <module>exceptions</module>
+        <module>streams</module>
     </modules>
 </project>
