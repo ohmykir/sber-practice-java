@@ -10,7 +10,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class DataContainer {
-    int value;
-    String name;
-    boolean isActive;
+    private int value;
+    private String name;
+    private boolean isActive;
 }
