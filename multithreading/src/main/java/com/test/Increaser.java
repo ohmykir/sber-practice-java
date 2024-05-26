@@ -9,7 +9,8 @@ public class Increaser extends Thread {
 
     @Override
     public void run() {
-        for (int i = 0; i < 6; i++) {
+        // для 3 задачи просто на 6 поменять назад можно
+        for (int i = 0; i < 10; i++) {
             processor.increase();
         }
     }

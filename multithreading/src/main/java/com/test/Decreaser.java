@@ -1,6 +1,6 @@
 package com.test;
 
-class Decreaser implements Runnable {
+class Decreaser extends Thread {
     private final ResourceProcessor processor;
 
     public Decreaser(ResourceProcessor processor) {
@@ -9,6 +9,8 @@ class Decreaser implements Runnable {
 
     @Override
     public void run() {
-        processor.decrease();
+        for (int i = 0; i < 10; i++) {
+            processor.decrease();
+        }
     }
 }
